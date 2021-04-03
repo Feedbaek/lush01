@@ -6,37 +6,24 @@
 /*   By: minskim2 <minskim2@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 20:36:32 by minskim2          #+#    #+#             */
-/*   Updated: 2021/04/03 22:15:03 by minskim2         ###   ########.fr       */
+/*   Updated: 2021/04/03 21:57:01 by minskim2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		*g_per;
-int		***g_way;
-
-int		*li(int *a)
-{
-	int i;
-
-	i = 0;
-	while (i < 4)
-	{
-		a[i] = i + 1;
-		i++;
-	}
-	return (a);
-}
+int		g_per[4];
+int		g_way[4][4][4];
 
 int		*in_the_box(int **box, int i, int j)
 {
 	int x;
 	int y;
-	int *list;
+	int list[4] = {1, 2, 3, 4,};
 	int n;
 	int k;
 
 	n = 0;
 	k = 0;
-	list = li(list);
+//	list = {1, 2, 3, 4};
 	while (k < 4)
 	{
 		x = 0;
@@ -72,6 +59,6 @@ void	rooop(int **box)
 int		main(void)
 {
 	int a[4][4];
-	rooop(a);
+	
 	return (0);
 }
